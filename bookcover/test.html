@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+</head>
+<body style="padding-right:10%;text-align:right;font-size:1.5em;line-height:2.5em;">
+<script>
+    const totalP = 7700000000; //一応現在の世界の人口がこんなものらしい。
+    let weekP = 0;//i週目
+    let passedP = 0;//チャレンジ終了した人
+    let w = 7;//増加数が7人（1日1人ずつ増加するので週で7人）
+    for (i = 0; weekP <= totalP ; i++){
+      weekP = weekP + 7 ** i - passedP;//1人に付き7人増えるので累乗
+      document.write(`${i}週目のブックカバーチャレンジは${weekP.toLocaleString()}人です。<br>`);
+      passedP = weekP;
+    }
+  </script>
+  </body>
+</html>
+</body>
+</html>
